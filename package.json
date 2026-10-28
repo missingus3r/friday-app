@@ -1,0 +1,36 @@
+{
+  "name": "friday-app",
+  "productName": "Friday",
+  "version": "0.1.0",
+  "description": "Cliente de escritorio para Friday Gateway",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable"
+  },
+  "build": {
+    "appId": "uy.br1.friday",
+    "productName": "Friday",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "assets/**/*"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "assets/icon.png"
+    },
+    "portable": {
+      "artifactName": "Friday-${version}-portable.exe"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
+    "playwright-core": "^1.49.1"
+  }
+}

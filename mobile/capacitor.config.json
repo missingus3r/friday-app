@@ -1,0 +1,13 @@
+{
+  "appId": "uy.br1.friday",
+  "appName": "Friday",
+  "webDir": "www",
+  "backgroundColor": "#07090c",
+  "overrideUserAgent": "FridayApp/0.1 (Android; Capacitor)",
+  "android": {
+    "allowMixedContent": true
+  },
+  "plugins": {
+    "CapacitorHttp": { "enabled": true }
+  }
+}
