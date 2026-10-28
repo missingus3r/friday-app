@@ -2,6 +2,7 @@
   "name": "friday-app",
   "productName": "Friday",
   "version": "0.1.0",
+  "license": "MIT",
   "description": "Cliente de escritorio para Friday Gateway",
   "main": "main.js",
   "scripts": {

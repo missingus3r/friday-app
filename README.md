@@ -15,6 +15,12 @@ A client for [Friday](https://github.com/missingus3r/friday-showcase), the 24/7 
 
 > ⚠️ **Not a turnkey product.** The app talks to **friday-gateway**, a small FastAPI service in front of Friday's memory, tasks, agents and Telegram ledger. Friday generated that gateway for its own setup; it is not part of [SETUP.md](https://github.com/missingus3r/friday-showcase/blob/main/SETUP.md) yet. Treat this repo as a reference client: the endpoints it expects are listed below.
 
+## Download
+
+Prebuilt binaries are on the [Releases page](https://github.com/missingus3r/friday-app/releases/latest):
+- `Friday-<version>-portable.exe`: Windows, no install. Unsigned, so SmartScreen may warn: *More info → Run anyway*.
+- `Friday-<version>.apk`: Android 5.1+. Debug-signed; allow installs from unknown sources.
+
 ## Features
 
 | Section | What it does | Gateway endpoints |
@@ -80,3 +86,7 @@ The Android project in `mobile/android` is committed (don't re-run `cap add`) an
 - `FRIDAY_PROFILE=<name>` runs a second desktop instance with its own config: a different token, so a different node.
 - The gateway evolves quickly. If something breaks, check `/openapi.json` first. The voice protocol is documented by the gateway's `/live/test` page: PCM16 mono at 24 kHz in, and `audio` / `interrupt` / `transcript` / `tool` / `error` messages out.
 - On Windows, if `electron-builder` fails with *Cannot create symbolic link* (winCodeSign), extract the cached `.7z` from `%LOCALAPPDATA%\electron-builder\Cache\winCodeSign` into a `winCodeSign-2.6.0` folder next to it, ignoring the darwin symlink errors, and retry.
+
+## License
+
+[MIT](LICENSE)
